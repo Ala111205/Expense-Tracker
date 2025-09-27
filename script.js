@@ -115,4 +115,4 @@ class TransactionApp{
   }
 }
 
-const app = new TransactionApp;
+const app = new TransactionApp();
