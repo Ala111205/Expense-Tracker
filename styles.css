@@ -1,0 +1,141 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: #f5f5f5;
+  padding: 20px;
+}
+
+.container {
+  width: 100%;
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.month-select-wrapper {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.month-select-wrapper label {
+  margin-right: 10px;
+}
+
+.month-select-wrapper button {
+  background: #D2691E;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  padding: 8px;
+  transition: background 0.2s ease-in-out;
+}
+
+.month-select-wrapper button:hover {
+  background:  #A0522D;
+}
+
+button:active {
+  transform: scale(0.9);
+}
+
+.transaction-form {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.transaction-form input,
+.transaction-form select {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.transaction-form .btn {
+  background: #007bff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  padding: 8px;
+  transition: background 0.2s ease-in-out;
+}
+
+.transaction-form .btn:hover {
+  background: #0056b3;
+}
+
+.totals {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+table thead {
+  background: #007bff;
+  color: #fff;
+}
+
+table th, table td {
+  padding: 10px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
+.delete-btn {
+  background: #dc3545;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.2s ease-in-out;
+}
+
+.delete-btn:hover {
+  background: #b52a38;
+}
+
+/* Mobile responsive */
+@media (max-width: 600px) {
+  .totals {
+    flex-direction: column;
+    gap: 10px;
+  }
+  table th, table td {
+    display: grid;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 360px) {
+  body {
+    padding: 8px;
+  }
+}
