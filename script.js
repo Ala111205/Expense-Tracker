@@ -30,7 +30,7 @@ class TransactionApp{
 
     this.transactionList.addEventListener("click", (e)=>{
       if(e.target.classList.contains("delete-btn")){
-        const index = e.target.dataset.index;
+        const index = Number(e.target.dataset.index);
         this.deleteTransaction(this.monthSelect.value, index)
       }
     })
@@ -115,4 +115,6 @@ class TransactionApp{
   }
 }
 
-const app = new TransactionApp();
+document.addEventListener('DOMContentLoaded', () => {
+  new TransactionApp();
+});
