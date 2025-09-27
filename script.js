@@ -29,7 +29,7 @@ class TransactionApp{
     this.monthSelect.addEventListener("change", ()=>this.renderTransaction(this.monthSelect.value));
 
     this.transactionList.addEventListener("click", (e)=>{
-      if(e.target.classList.contains("btn-delete")){
+      if(e.target.classList.contains("delete-btn")){
         const index = e.target.dataset.index;
         this.deleteTransaction(this.monthSelect.value, index)
       }
@@ -77,7 +77,7 @@ class TransactionApp{
   deleteTransaction(monthKey, index){
     this.allTransactions[monthKey].splice(index, 1);
     this.saveToLocal();
-    renderTransaction(monthKey);
+    this.renderTransaction(monthKey);
   }
   renderTransaction(monthKey){
     this.tempTransactions = [...(this.allTransactions[monthKey] || [])];
