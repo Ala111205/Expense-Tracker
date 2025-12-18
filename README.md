@@ -1,36 +1,143 @@
-# 💰 Expense Tracker
+**💰 Expense Tracker (Advanced)**
 
-A simple browser-based app to record, view, and manage your income and expenses month-wise. It stores data locally in your browser (via localStorage) so it works even without an internet connection.
+      A feature-rich, browser-based Expense Tracker that allows users to manage income and expenses month-wise, filter and visualize data, and persist everything locally using localStorage.
+      
+      Built entirely with Vanilla JavaScript — no frameworks, no shortcuts.
 
-## 🚀 Features
+**Live Demo** 👉 https://ala111205.github.io/Expense-Tracker/
 
-### Add Transactions
-Enter date, description, category, amount, and type (income or expense).
+**🚀 Key Features:**
 
-### Month-wise Tracking
-- Automatically groups transactions by the month of the transaction date.
-- Dropdown selector to switch between months.
+**➕ Transaction Management**
 
-### View Totals
-Shows total income, total expense, and net balance for the selected month.
+      Add income and expense transactions
 
-### Delete Transactions
-Remove any transaction from a month instantly.
+      Fields: date, description, category, amount, type
 
-### Clear Current Month Table
-Temporarily clear the displayed table of transactions for the current month **without losing the actual data for that month**.  
-After a page refresh, the saved data for that month will reappear because it’s still stored in localStorage.
+      Transactions are automatically grouped by month based on date
 
-### Persistent Storage
-All data saved to browser localStorage so it’s available after page refresh.
+      Input validation prevents invalid or incomplete entries
 
-### Responsive Table UI
-Lists transactions in a table with date, description, category, amount, type, and delete button.
+**📆 Month-Wise Expense Tracking**
 
-## 🛠️ Technologies
-HTML • CSS • JavaScript (Vanilla)
+      Month selector dynamically populated from stored data
 
-## 📄 How to Use
-1. Add your transactions using the form.
-2. Use the month dropdown to switch between months.
-3. Click “Delete” to remove a transaction or “Reset” to clear the current month.
+      Switch between months without losing any data
+
+      Each month maintains independent transactions and totals
+
+**📊 Financial Summary (Per Month)**
+
+      Total Income
+
+      Total Expenses
+
+      Net Balance (Income − Expense)
+
+      Values update instantly on add, delete, edit, filter, or import
+
+**🗂 Category Filtering**
+
+      Filter transactions by category (Food, Transport, Rent, Salary, etc.)
+
+      Filtering updates:
+
+        Transaction table
+
+        Totals (income, expense, balance)
+
+        Pie chart visualization
+
+      Filter does not affect stored data, only the view
+
+**✏️ Edit & Delete Transactions**
+
+      Edit any transaction directly from the table
+
+      Updates reflect immediately in totals and charts
+
+      Delete transactions permanently from localStorage
+
+**📈 Data Visualization**
+
+      Interactive Pie Chart (Chart.js)
+
+      Shows expense distribution by category
+
+      Automatically updates when:
+
+      Month changes
+
+      Category filter changes
+
+      Transaction is added, edited, or deleted
+
+**🔄 Reset Table (Safe Reset)**
+
+      Clears the table UI for the selected month only
+
+      Does NOT delete stored data
+
+      Refreshing the page restores the saved transactions
+
+**📤 Export & 📥 Import Data**
+
+      Export all transactions as a JSON file
+
+      Import previously exported data
+
+      Imported data:
+
+        Merges safely with existing months
+
+        Recalculates totals and charts automatically
+
+      Useful for backups or transferring data between devices
+
+**💾 Persistent Storage**
+
+      Uses browser localStorage
+
+      No backend required
+
+      Works fully offline
+
+      Data remains available after page reload or browser restart
+
+**📱 Responsive UI**
+
+      Clean and simple layout
+
+      Works smoothly on:
+
+      Desktop
+
+      Tablet
+
+      Mobile
+
+**🛠️ Technologies Used:**
+
+      HTML5 – Structure
+
+      CSS3 – Styling & responsive layout
+
+      JavaScript (Vanilla) – Logic & data handling
+  
+      Chart.js – Expense visualization
+
+      LocalStorage API – Data persistence
+
+**📄 How to Use:**
+
+      Add transactions using the input form.
+
+      Select a month from the dropdown to view its data.
+
+      Filter transactions by category if needed.
+
+      Edit or delete transactions directly from the table.
+
+      View updated totals and chart in real time.
+
+      Use Export to save your data or Import to restore it.
