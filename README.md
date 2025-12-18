@@ -18,7 +18,8 @@ Shows total income, total expense, and net balance for the selected month.
 Remove any transaction from a month instantly.
 
 ### Clear Current Month Table
-Reset/clear the displayed table of transactions for the current month without losing other months.
+Temporarily clear the displayed table of transactions for the current month **without losing the actual data for that month**.  
+After a page refresh, the saved data for that month will reappear because it’s still stored in localStorage.
 
 ### Persistent Storage
 All data saved to browser localStorage so it’s available after page refresh.
