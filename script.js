@@ -159,7 +159,7 @@ class TransactionApp {
 
     if (!confirmDelete) return;
 
-    // 🔥 REAL DELETE
+    // DELETE
     delete this.allTransactions[monthKey];
 
     // Save changes
