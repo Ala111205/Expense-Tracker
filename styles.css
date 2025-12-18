@@ -154,11 +154,15 @@ table tr td:last-child {
 }
 
 .edit-btn {
-  background-color: green;
+  background-color: #198754;
 }
 
 .delete-btn:hover {
   background: #b52a38;
+}
+
+.edit-btn:hover {
+  background: #146c43;
 }
 
 .export-import-wrapper {
@@ -170,6 +174,8 @@ table tr td:last-child {
   .filter-wrapper {
     width: 100%;
     background: silver;
+    padding: 2px;
+    border-radius: 4px;
   }
 
   .canvas {
