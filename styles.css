@@ -83,6 +83,33 @@ button:active {
   background: #0056b3;
 }
 
+/* Wrap filter and chart neatly */
+.table-options {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  margin: 1em 0;
+}
+
+.filter-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5em;
+}
+
+/* Smaller filter dropdown */
+#category-filter {
+  padding: 0.25em;
+  font-size: 0.9em;
+}
+
+#expense-chart {
+  width: 300px !important;
+  height: 300px !important;
+}
+
 .totals {
   display: flex;
   justify-content: space-around;
@@ -108,7 +135,13 @@ table th, table td {
   border-bottom: 1px solid #ddd;
 }
 
-.delete-btn {
+table tr td:last-child {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+.delete-btn, .edit-btn {
   background: #dc3545;
   color: #fff;
   border: none;
@@ -118,12 +151,39 @@ table th, table td {
   transition: background 0.2s ease-in-out;
 }
 
+.edit-btn {
+  background-color: green;
+}
+
 .delete-btn:hover {
   background: #b52a38;
 }
 
+.export-import-wrapper {
+    margin-top: 1rem;
+}
+
 /* Mobile responsive */
-@media (max-width: 600px) {
+@media (max-width: 655px){
+  .filter-wrapper {
+    width: 100%;
+    background: silver;
+  }
+
+  .canvas {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 2px 10px;
+  }
+
+  #expense-chart {
+    width: fit-content !important;
+    height: fit-content !important;
+  }
+}
+
+@media (max-width: 630px) {
   .totals {
     flex-direction: column;
     gap: 10px;
